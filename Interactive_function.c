@@ -1,20 +1,19 @@
 #include "myyshell.h"
 
 /**
- * interactive - returns true if shell is interactive
- * @inf: struct address
+ * intertive - return to true, if shell interctive
+ * @inf: address strcut.
  * Return: 1 if interactive mode, otherwise 0
  */
-int interactive(inf_t *inf)
+int intertive(inf_t *inf)
 {
-	return (isatty(STDIN_FILENO) && inf->read <= 2);
+	return (isaty(STDIN_FNO) && inf->read <= 2);
 }
-
 /**
- * is_dlim - checks if character is a delimeter
- * @ca: the char to check
- * @dlim: the delimeter string
- * Return: 1 if true, 0 if false
+ * is_dlim - checks if a delimeter is a character
+ * @ca: the character checks
+ * @dlim: string to dalimeter
+ * Return: 1 if success, oterwise 0
  */
 int is_dlim(char ca, char *dlim)
 {
@@ -23,13 +22,11 @@ int is_dlim(char ca, char *dlim)
 			return (1);
 	return (0);
 }
-
 /**
- * _isalfa - checks for alphabetic character
- * @b: The character to input
- * Return: 1 if b is alphabetic, otherwise 0
+ * _isalfa - check for the alphabet
+ * @b: The input to the character
+ * Return: 1 if b success, otherwise 0
  */
-
 int _isalfa(int b)
 {
 	if ((b >= 'a' && b <= 'z') || (b >= 'A' && b <= 'Z'))
@@ -37,13 +34,11 @@ int _isalfa(int b)
 	else
 		return (0);
 }
-
 /**
- * _atooi - converts a string to an integer
- * @sr: the string to be converted
- * Return: 0 if no numbers in string, otherwise converted number
+ * _atooi - converting the string to integer
+ * @sr: string convert
+ * Return: 0 if string have no number, otherwise converted it
  */
-
 int _atooi(char *sr)
 {
 	int a, sin = 1, flg = 0, oput;

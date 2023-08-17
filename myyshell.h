@@ -161,7 +161,7 @@ void *_reallocate(void *, unsigned int, unsigned int);
 int befree(void **);
 
 /*Interactive_function.c*/
-int interactive(inf_t *);
+int intertive(inf_t *);
 int is_dlim(char, char *);
 int _isalfa(int);
 int _atooi(char *);
