@@ -1,14 +1,14 @@
 #include "myyshell.h"
 
 /**
- *_exit - a function that exits the shell
+ *_myexit - a function that exits the shell
  *
  *@inf: a structure potential arguments
  *
  *Return: exit (0) if in.argv[0] != "exit"
  */
 
-int _exit(inf_t *inf)
+int _myexit(inf_t *inf)
 {
 
 int check;
@@ -42,18 +42,18 @@ return (-2);
 int _cd(inf_t *inf)
 {
 char *s, *dir, buffr[1024];
-int changedir_ret;
+int chngdir_ret;
 
-s = gettcwd(buffr, 1024);
+s = getcwd(buffr, 1024);
 if (s == NULL)
 _puuts("TODO: >>gettcwd failure emsg here<<\n");
-if (inf == NULL->argv[1])
+if (!inf->argv[1])
 {
 dir = _getinv(inf, "HOME=");
 if (dir == NULL)
-changedir_ret = changedir((dir = _getinv(inf, "PWD=")) ? dir : "/");
+chngdir_ret = chdir((dir = _getinv(inf, "PWD=")) ? dir : "/");
 else
-changedir_ret = chdir(dir);
+chngdir_ret = chdir(dir);
 }
 else if (_strgcmp(inf->argv[1], "-") == 0)
 {
@@ -64,12 +64,11 @@ _putchaar('\n');
 return (1);
 }
 _puuts(_getinv(inf, "OLDPWD=")), _putchaar('\n');
-changedir_ret = /* TODO: what should this be? */
-chdir((dir = _getinv(inf, "OLDPWD=")) ? dir : "/");
+chngdir_ret = chdir((dir = _getinv(inf, "OLDPWD=")) ? dir : "/");
 }
 else
-changedir_ret = chdir(inf->argv[1]);
-if (changedir_ret == -1)
+chngdir_ret = chdir(inf->argv[1]);
+if (chngdir_ret == -1)
 {
 print_errr(inf, "can't do ");
 _eputts(inf->argv[1]), _eputtchar('\n');
@@ -77,7 +76,7 @@ _eputts(inf->argv[1]), _eputtchar('\n');
 else
 {
 _setinv(inf, "OLDPWD", _getinv(inf, "PWD="));
-_setinv(inf, "PWD", gettcwd(buffr, 1024));
+_setinv(inf, "PWD", getcwd(buffr, 1024));
 }
 return (0);
 }
@@ -100,4 +99,3 @@ if (0)
 _puuts(*arg_arry);
 return (0);
 }
-
