@@ -181,6 +181,7 @@ int _myhelp(inf_t *);
 /*Function_historicalB.c*/
 int _myhisstory(inf_t *);
 int _myaliaas(inf_t *);
+int print_aliaas(list_t *nodd);
 
 /*line_function.c*/
 ssize_t get_input(inf_t *);
