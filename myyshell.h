@@ -111,6 +111,7 @@ char *tyype;
 int (*function)(inf_t *);
 } builltiin_table;
 
+
 /*sh_loop.c*/
 int hsh(inf_t *, char **);
 int find_builltiin(inf_t *);
@@ -125,7 +126,7 @@ char *find_path(inf_t *, char *, char *);
 /*loofsh.c*/
 int loofsh(char **);
 
-/*print_erorrB.c*/
+/* print_erorrB.c */
 void _eputts(char *);
 int _eputtchar(char);
 int _putf(char c, int f);
@@ -154,26 +155,26 @@ char **strgtow2(char *, char);
 
 /*function_memoryB.c*/
 char *_memst(char *, char, unsigned int);
-void free(char **);
+void vree(char **);
 void *_reallocate(void *, unsigned int, unsigned int);
 
 /*function_memoryA.c*/
-int befree(void **);
+int bevree(void **);
 
-/*Interactive_function.c*/
-int interactive(inf_t *);
+/* Interative_function.c*/
+int interative(inf_t *);
 int is_dlim(char, char *);
 int _isalfa(int);
 int _atooi(char *);
 
 /*print_erorrA.c*/
 int _erratooi(char *);
-void print_error(inf_t *, char *);
+void print_errr(inf_t *, char *);
 int prent_d(int, int);
 char *conv_numb(long int, int, int);
 void rv_comms(char *);
 
-/*Function_historicalC.c*/
+/*Function_historicalC.c */
 int _myexit(inf_t *);
 int _mycd(inf_t *);
 int _myhelp(inf_t *);
@@ -181,7 +182,6 @@ int _myhelp(inf_t *);
 /*Function_historicalB.c*/
 int _myhisstory(inf_t *);
 int _myaliaas(inf_t *);
-int print_aliaas(list_t *nodd);
 
 /*line_function.c*/
 ssize_t get_input(inf_t *);
@@ -191,7 +191,7 @@ void siginhand(int);
 /*information_function.c*/
 void clear_inf(inf_t *);
 void set_inf(inf_t *, char **);
-void free_inf(inf_t *, int);
+void vree_inf(inf_t *, int);
 
 /*function_invB.c*/
 char *_getinv(inf_t *, const char *);
@@ -205,7 +205,7 @@ char **get_inviroon(inf_t *);
 int _unsetinv(inf_t *, char *);
 int _setinv(inf_t *, char *, char *);
 
-/* Function_historicalA.c*/
+/*Function_historicalA.c*/
 char *get_hisstory_file(inf_t *inf);
 int write_hisstory(inf_t *inf);
 int read_hisstory(inf_t *inf);
