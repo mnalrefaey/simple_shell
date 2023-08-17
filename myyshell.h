@@ -161,13 +161,8 @@ void *_reallocate(void *, unsigned int, unsigned int);
 /*function_memoryA.c*/
 int bevree(void **);
 
-<<<<<<< HEAD
 /* Interative_function.c*/
 int interative(inf_t *);
-=======
-/*Interactive_function.c*/
-int intertive(inf_t *);
->>>>>>> b4018b73e90115db92d9bf52b5e9d0566014a3e0
 int is_dlim(char, char *);
 int _isalfa(int);
 int _atooi(char *);
