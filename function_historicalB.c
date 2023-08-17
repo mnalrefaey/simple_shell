@@ -1,21 +1,20 @@
 #include "myyshell.h"
 
 /**
- * _myhisstory - displays the history list with line numbers start at 0
- * @inf: structure containing potential arguments
- *  Return: Always 0
+ * _myhisstory - display history start with 0, one line and one numbers line
+ * @inf: structure arguments
+ *  Return: success always 0
  */
 int _myhisstory(inf_t *inf)
 {
 	print_list(inf->hisstory);
 	return (0);
 }
-
 /**
- * unset_aliaas - sets aliaas to string
- * @inf: parameter struct
- * @strg: string alias
- * Return: Always 0 on success, 1 on unsuccess
+ * unset_aliaas - aliaas set in string
+ * @inf: struct
+ * @strg: string
+ * Return: 0 on success, otherwise 1
  */
 int unset_aliaas(inf_t *inf, char *strg)
 {
@@ -32,12 +31,11 @@ int unset_aliaas(inf_t *inf, char *strg)
 	*c = g;
 	return (rt);
 }
-
 /**
- * set_aliaas - sets aliaas to string
- * @inf: parameter struct
- * @strg: the string aliaas
- * Return: Always 0 on success, 1 unsuccess
+ * set_aliaas - the string to aliaas
+ * @inf: struct
+ * @strg: string aliaas
+ * Return: 0 always on success, 1 unsuccess
  */
 int set_aliaas(inf_t *inf, char *strg)
 {
@@ -54,9 +52,9 @@ int set_aliaas(inf_t *inf, char *strg)
 }
 
 /**
- * print_aliaas - prints an aliaas string
- * @nodd: the aliaas node
- * Return: Always 0 on success, 1 on error
+ * print_aliaas - string to print
+ * @nodd: node to alias
+ * Return: 0 always on success, otherwise 1
  */
 int print_aliaas(list_t *nodd)
 {
@@ -66,19 +64,19 @@ int print_aliaas(list_t *nodd)
 	{
 		c = _strgchr(nodd->strg, '=');
 		for (i = nodd->strg; i <= c; i++)
-		_putchar(*i);
-		_putchar('\'');
-		_puts(c + 1);
-		_puts("'\n");
+		_putchaar(*i);
+		_putchaar('\'');
+		_puuts(c + 1);
+		_puuts("'\n");
 		return (0);
 	}
 	return (1);
 }
 
 /**
- * _myaliaas - mimics the aliaas builltiin
- * @inf: structure containing potential arguments
- *  Return: Always 0
+ * _myaliaas - the alais buitin mimic
+ * @inf: struct argument
+ *  Return: 0 always
  */
 int _myaliaas(inf_t *inf)
 {
