@@ -154,7 +154,7 @@ char **strgtow2(char *, char);
 
 /*function_memoryB.c*/
 char *_memst(char *, char, unsigned int);
-void free(char **);
+void vree(char **);
 void *_reallocate(void *, unsigned int, unsigned int);
 
 /*function_memoryA.c*/
