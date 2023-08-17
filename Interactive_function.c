@@ -6,7 +6,7 @@
  * @inf: struct address
  * Return: If interative mode returns 1, otherwise 0
  */
- 
+
 int Interative(inf_t *inf)
 {
 return (isatty(STDIN_FILENO) && inf->rdf <= 2);
@@ -18,10 +18,9 @@ return (isatty(STDIN_FILENO) && inf->rdf <= 2);
  * @ca: checks the char
  *
  * @dlim: string
- 
  * Return: If true returns 1, if false 0
  */
- 
+
 int is_dlim(char ca, char *dlim)
 {
 while (*dlim)
@@ -36,8 +35,8 @@ return (0);
  * @b: a character
  * Return: if b is alphabetic returns 1, otherwise 0
  */
- 
- int _isalfa(int b)
+
+int _isalfa(int b)
 {
 if ((b >= 'a' && b <= 'z') || (b >= 'A' && b <= 'Z'))
 return (1);
@@ -71,7 +70,7 @@ answer += (sr[a] - '0');
 else if (flg == 1)
 flg = 2;
 }
-		
+
 if (sin == -1)
 oput = -answer;
 else
