@@ -127,9 +127,9 @@ char *find_path(inf_t *, char *, char *);
 int loofsh(char **);
 
 /* print_erorrB.c */
-void _eputts(char *);
-int _eputtchar(char);
-int _putf(char c, int f);
+void _epuuts(char *);
+int _epuutchar(char);
+int _putf(char z, int f);
 int _putsf(char *strg, int f);
 
 /*function_stringA.c*/
