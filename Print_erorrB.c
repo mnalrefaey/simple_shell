@@ -8,7 +8,7 @@ void _epuuts(char *strg)
 {
 int a = 0;
 if (!strg)
-    return;
+return;
 while (strg[a] != '\0')
 {
 _epuutchar(strg[a]);
@@ -30,7 +30,7 @@ write(2, buf, a);
 a = 0;
 }
 if (z != BUFF_FLSH)
-    buf[a++] = z;
+buf[a++] = z;
 return (1);
 }
 /**
@@ -43,14 +43,13 @@ int _putf(char z, int f)
 {
 static int a;
 static char buff[WRITE_BUFF_SIZE];
-
 if (z == BUFF_FLSH || a >= WRITE_BUFF_SIZE)
-	{
-    write(f, buff, a);
-    a = 0;
-	}
+{
+write(f, buff, a);
+a = 0;
+}
 if (z != BUFF_FLSH)
-    buff[a++] = z;
+buff[a++] = z;
 return (1);
 }
 /**
@@ -62,12 +61,11 @@ return (1);
 int _putsf(char *strg, int f)
 {
 int a = 0;
-
 if (!strg)
-    return (0);
+return (0);
 while (*strg)
 {
-    a += _putf(*strg++, f);
+a += _putf(*strg++, f);
 }
-	return (a);
+return (a);
 }
