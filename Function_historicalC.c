@@ -42,18 +42,18 @@ return (-2);
 int _cd(inf_t *inf)
 {
 char *s, *dir, buffr[1024];
-int chngdir_ret;
+int chdir_rit;
 
 s = getcwd(buffr, 1024);
 if (s == NULL)
-_puuts("TODO: >>gettcwd failure emsg here<<\n");
+_puuts("TODO: >>getcwd failure here<<\n");
 if (!inf->argv[1])
 {
 dir = _getinv(inf, "HOME=");
 if (dir == NULL)
-chngdir_ret = chdir((dir = _getinv(inf, "PWD=")) ? dir : "/");
+chdir_rit = chdir((dir = _getinv(inf, "PWD=")) ? dir : "/");
 else
-chngdir_ret = chdir(dir);
+chdir_rit = chdir(dir);
 }
 else if (_strgcmp(inf->argv[1], "-") == 0)
 {
@@ -64,11 +64,11 @@ _putchaar('\n');
 return (1);
 }
 _puuts(_getinv(inf, "OLDPWD=")), _putchaar('\n');
-chngdir_ret = chdir((dir = _getinv(inf, "OLDPWD=")) ? dir : "/");
+chdir_rit = chdir((dir = _getinv(inf, "OLDPWD=")) ? dir : "/");
 }
 else
-chngdir_ret = chdir(inf->argv[1]);
-if (chngdir_ret == -1)
+chdir_rit = chdir(inf->argv[1]);
+if (chdir_rit == -1)
 {
 print_errr(inf, "can't do ");
 _eputts(inf->argv[1]), _eputtchar('\n');
