@@ -221,7 +221,7 @@ void vree_list(list_t **);
 
 /*List_lenth_FunctionB.c*/
 size_t list_lenth(const list_t *);
-char **list_t_strings(list_t *);
+char **list_t_string(list_t *);
 size_t print_lest(const list_t *);
 list_t *nodd_begin_with(list_t *, char *, char);
 ssize_t get_nodd_index(list_t *, list_t *);
