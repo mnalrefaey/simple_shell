@@ -49,11 +49,11 @@ return (-1);
 
 for (nodd = inf->hisstory; nodd; nodd = nodd->nex)
 {
-_putsv(nodd->strg, v);
-_putv('\n', v);
+_putf(nodd->strgr, v);
+_putf('\n', v);
 }
 
-_putv(BUFF_FLSH, v);
+_putf(BUFF_FLSH, v);
 close(v);
 return (1);
 
@@ -62,14 +62,14 @@ return (1);
 /**
  * read_hisstory - read from the file the hisstory
  * @inf: struction parameter
- * Return: on success hisstorycount, else 0
+ * Return: on success historycount, else 0
 */
 
 int read_hisstory(inf_t *inf)
 {
 int a, fin = 0, linec = 0;
 ssize_t i, redlen, filesize = 0;
-struct sta t;
+struct stat st;
 char *buff = NULL, *fname = get_hisstory_file(inf);
 
 if (!fname)
@@ -81,8 +81,8 @@ free(fname);
 if (i == -1)
 return (0);
 
-if (!fsta(i, &t))
-filesize = t.t_size;
+if (!fstat(i, &st))
+filesize = st.st_size;
 if (filesize < 2)
 return (0);
 
@@ -107,12 +107,12 @@ fin = a + 1;
 if (fin != a)
 build_hisstory_list(inf, buff + fin, linec++);
 free(buff);
-inf->hisstorycount = linec;
+inf->historycount = linec;
 
-while (inf->hisstorycount-- >= HST_MAX)
+while (inf->historycount-- >= HST_MAX)
 delete_nodd_at_index(&(inf->hisstory), 0);
 renum_hisstory(inf);
-return (inf->hisstorycount);
+return (inf->historycount);
 }
 
 /**
@@ -149,7 +149,7 @@ int a = 0;
 
 while (nodd)
 {
-nodd->num = a++;
+nodd->numm = a++;
 nodd = nodd->nex;
 }
 return (inf->historycount = a);
