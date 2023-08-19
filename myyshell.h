@@ -209,7 +209,7 @@ int _setinv(inf_t *, char *, char *);
 char *get_hisstory_file(inf_t *inf);
 int write_hisstory(inf_t *inf);
 int read_hisstory(inf_t *inf);
-int build_hisstory_list(inf_t *inf, char *buf, int linec);
+int build_hisstory_list(inf_t *inf, char *buff, int linec);
 int renumber_hisstory(inf_t *inf);
 
 /*List_node_functionA.c*/
