@@ -95,7 +95,7 @@ int rdf;
 int historycount;
 } inf_t;
 
-#define infRMATION_INIT \
+#define INFRMATION_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 0, 0, 0}
 
@@ -198,7 +198,7 @@ char *_getinv(inf_t *, const char *);
 int _myinv(inf_t *);
 int _mysetinv(inf_t *);
 int _myunsetinv(inf_t *);
-int populate_inv_list(inf_t *);
+int populate_inv_lst(inf_t *);
 
 /*function_invA.c*/
 char **get_inviroon(inf_t *);

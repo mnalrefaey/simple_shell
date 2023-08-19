@@ -81,14 +81,14 @@ return (0);
 }
 
 /**
- * populate_inv_list - linked list
+ * populate_inv_lst - linked list
  *
  * @inf: structure arguments
  *
  * Return: Always 0
  */
 
-int populate_inv_list(inf_t *inf)
+int populate_inv_lst(inf_t *inf)
 {
 list_t *nodd = NULL;
 size_t j;
