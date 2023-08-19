@@ -210,7 +210,7 @@ char *get_hisstory_file(inf_t *inf);
 int write_hisstory(inf_t *inf);
 int read_hisstory(inf_t *inf);
 int build_hisstory_list(inf_t *inf, char *buff, int linec);
-int renumber_hisstory(inf_t *inf);
+int renum_hisstory(inf_t *inf);
 
 /*List_node_functionA.c*/
 list_t *add_nodd(list_t **, const char *, int);
