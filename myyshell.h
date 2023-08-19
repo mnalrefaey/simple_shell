@@ -230,7 +230,7 @@ ssize_t get_nodd_index(list_t *, list_t *);
 int is_chaain(inf_t *, char *, size_t *);
 void chain_checker(inf_t *, char *, size_t *, size_t, size_t);
 int replace_aliaas(inf_t *);
-int replace_vars(inf_t *);
+int replace_fars(inf_t *);
 int rep_string(char **, char *);
 
 #endif
