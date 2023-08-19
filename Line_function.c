@@ -59,7 +59,7 @@ ssize_t get_inpt(inf_t *inf)
 static char *buff;
 static size_t x, k, ln;
 ssize_t d = 0;
-char **buff_p = &(inf->arg), *t;
+char **buff_p = &(inf->arrg), *t;
 
 _putchaar(BUFF_FLSH);
 d = inpt_buff(inf, &buff, &ln);

@@ -48,12 +48,12 @@ return (NULL);
 
 int _mysetinv(inf_t *inf)
 {
-if (inf->argc != 3)
+if (inf->arrgc != 3)
 {
 _eputts("Incorrect number\n");
 return (1);
 }
-if (_setinv(inf, inf->argv[1], inf->argv[2]))
+if (_setinv(inf, inf->arrgv[1], inf->arrgv[2]))
 return (0);
 return (1);
 }
@@ -70,13 +70,13 @@ int _myunsetinv(inf_t *inf)
 {
 int j;
 
-if (inf->argc == 1)
+if (inf->arrgc == 1)
 {
 _eputts("few arguements.\n");
 return (1);
 }
-for (j = 1; j <= inf->argc; j++)
-_unsetinv(inf, inf->argv[j]);
+for (j = 1; j <= inf->arrgc; j++)
+_unsetinv(inf, inf->arrgv[j]);
 return (0);
 }
 

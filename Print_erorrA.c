@@ -48,7 +48,7 @@ _eputts(inf->filen);
 _eputts(": ");
 prent_d(inf->line_countt, STDERR_FILENO);
 _eputts(": ");
-_eputts(inf->argv[0]);
+_eputts(inf->arrgv[0]);
 _eputts(": ");
 _eputts(estrg);
 }

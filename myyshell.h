@@ -53,17 +53,17 @@ struct lststrg *nex;
 /**
  * struct pasinfrmation - a function that contains pseudo-argu to pass
  * and allowing prototype for struct
- * @arg: generated string
+ * @arrg: generated string
  * @aliaas: aliaas node
  * @inv_changed: if inviroon was changed
  * @hisstory: hisstory node
- * @path: a path string
+ * @paath: a paath string
  * @historycount: the hisstory line number count
  * @rdf: to read the input of line
  * @statuus: the return statuus of the last exec'd command
  * @inviroon: a modified copy of inviroon
- * @argv:array of strings
- * @argc: count of argument
+ * @arrgv:array of strings
+ * @arrgc: count of argument
  * @cm_buff_type: CM_type
  * @line_countt: count error
  * @cm_buff: an address of pointer
@@ -75,10 +75,10 @@ struct lststrg *nex;
 
 typedef struct pasinfrmation
 {
-char *arg;
-char **argv;
-char *path;
-int argc;
+char *arrg;
+char **arrgv;
+char *paath;
+int arrgc;
 unsigned int line_countt;
 int err_numm;
 int linec_fllag;
@@ -121,15 +121,15 @@ void fork_cm(inf_t *);
 /*duplicate_function.c*/
 int is_cm(inf_t *, char *);
 char *dupl_chars(char *, int, int);
-char *find_path(inf_t *, char *, char *);
+char *find_paath(inf_t *, char *, char *);
 
 /*loofsh.c*/
 int loofsh(char **);
 
 /* print_erorrB.c */
-void _epuuts(char *);
-int _epuutchar(char);
-int _putf(char z, int f);
+void _eputts(char *);
+int _eputtchar(char);
+int _putf(char c, int f);
 int _putsf(char *strg, int f);
 
 /*function_stringA.c*/

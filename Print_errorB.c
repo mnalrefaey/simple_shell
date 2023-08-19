@@ -15,20 +15,20 @@ if (strg == NULL)
 return;
 while (strg[a] != '\0')
 {
-_epuutchar(strg[a]);
+_eputtchar(strg[a]);
 a++;
 }
 }
 
 /**
- * _epuutchar - print the character z to the stderr
+ * _eputtchar - print the character z to the stderr
  *
  * @z: The printed character
  *
  * Return: success always 1, otherwise -1
 */
 
-int _epuutchar(char z)
+int _eputtchar(char z)
 {
 static int x;
 static char buff[WR_BUFF_SIZE];
