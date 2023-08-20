@@ -150,8 +150,8 @@ char *_strgncat(char *, char *, int);
 char *_strgchr(char *, char);
 
 /*function_stringC.c*/
-char **strgtow(char *, char *);
-char **strgtow2(char *, char);
+char **strgtw(char *, char *);
+char **strgtwb(char *, char);
 
 /*function_memoryB.c*/
 char *_memst(char *, char, unsigned int);
