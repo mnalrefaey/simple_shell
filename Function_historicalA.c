@@ -49,7 +49,7 @@ return (-1);
 
 for (nodd = inf->hisstory; nodd; nodd = nodd->nex)
 {
-_putf(nodd->strgr, v);
+_putsf(nodd->strgr, v);
 _putf('\n', v);
 }
 
@@ -74,28 +74,22 @@ char *buff = NULL, *fname = get_hisstory_file(inf);
 
 if (!fname)
 return (0);
-
 i = open(fname, O_RDONLY);
 free(fname);
-
 if (i == -1)
 return (0);
-
 if (!fstat(i, &st))
 filesize = st.st_size;
 if (filesize < 2)
 return (0);
-
 buff = malloc(sizeof(char) * (filesize + 1));
 if (!buff)
 return (0);
-
 redlen = read(i, buff, filesize);
 buff[filesize] = 0;
 if (redlen <= 0)
 return (free(buff), 0);
 close(i);
-
 for (a = 0; a < filesize; a++)
 if (buff[a] == '\n')
 {
@@ -103,15 +97,13 @@ buff[a] = 0;
 build_hisstory_list(inf, buff + fin, linec++);
 fin = a + 1;
 }
-
 if (fin != a)
 build_hisstory_list(inf, buff + fin, linec++);
 free(buff);
 inf->historycount = linec;
-
 while (inf->historycount-- >= HST_MAX)
 delete_nodd_at_index(&(inf->hisstory), 0);
-renum_hisstory(inf);
+renumber_hisstory(inf);
 return (inf->historycount);
 }
 
@@ -137,12 +129,12 @@ return (0);
 }
 
 /**
- * renum_hisstory - the history linked be renumber
+ * renumber_hisstory - the history linked be renumber
  * @inf: rgument structer
  * Return: hisstorycount, the new one
  */
 
-int renum_hisstory(inf_t *inf)
+int renumber_hisstory(inf_t *inf)
 {
 list_t *nodd = inf->hisstory;
 int a = 0;
