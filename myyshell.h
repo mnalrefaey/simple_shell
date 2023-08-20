@@ -175,9 +175,9 @@ char *conv_numb(long int, int, int);
 void rv_comms(char *);
 
 /*Function_historicalC.c */
-int _myexit(inf_t *);
-int _mycd(inf_t *);
-int _myhelp(inf_t *);
+int _xexit(inf_t *);
+int _cd(inf_t *);
+int _help(inf_t *);
 
 /*Function_historicalB.c*/
 int _myhisstory(inf_t *);
@@ -209,8 +209,8 @@ int _setinv(inf_t *, char *, char *);
 char *get_hisstory_file(inf_t *inf);
 int write_hisstory(inf_t *inf);
 int read_hisstory(inf_t *inf);
-int build_hisstory_list(inf_t *inf, char *buff, int linec);
-int renum_hisstory(inf_t *inf);
+int build_hisstory_list(inf_t *inf, char *buf, int linec);
+int renumber_hisstory(inf_t *inf);
 
 /*List_node_functionA.c*/
 list_t *add_nodd(list_t **, const char *, int);
@@ -221,7 +221,7 @@ void vree_list(list_t **);
 
 /*List_lenth_FunctionB.c*/
 size_t list_lenth(const list_t *);
-char **list_t_string(list_t *);
+char **list_t_strings(list_t *);
 size_t print_lest(const list_t *);
 list_t *nodd_begin_with(list_t *, char *, char);
 ssize_t get_nodd_index(list_t *, list_t *);

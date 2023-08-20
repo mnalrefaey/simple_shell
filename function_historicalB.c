@@ -1,14 +1,14 @@
 #include "myyshell.h"
 
 /**
- *_myexit - a function that exits the shell
+ *_xexit - a function that exits the shell
  *
  *@inf: a structure potential arguments
  *
  *Return: exit (0) if in.arrgv[0] != "exit"
  */
 
-int _myexit(inf_t *inf)
+int _xexit(inf_t *inf)
 {
 
 int check;
