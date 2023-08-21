@@ -113,7 +113,7 @@ int (*function)(inf_t *);
 
 
 /*sh_loop.c*/
-int hsh(inf_t *, char **);
+int haash(inf_t *, char **);
 int find_builltiin(inf_t *);
 void find_cm(inf_t *);
 void fork_cm(inf_t *);
@@ -150,8 +150,8 @@ char *_strgncat(char *, char *, int);
 char *_strgchr(char *, char);
 
 /*function_stringC.c*/
-char **strgtw(char *, char *);
-char **strgtwb(char *, char);
+char **strtwords(char *, char *);
+char **strtowrdss(char *, char);
 
 /*function_memoryB.c*/
 char *_memst(char *, char, unsigned int);

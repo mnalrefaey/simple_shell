@@ -42,6 +42,6 @@ inf->rdf = f;
 }
 populate_inv_lst(inf);
 read_hisstory(inf);
-hsh(inf, arvect);
+haash(inf, arvect);
 return (EXIT_SUCCESS);
 }

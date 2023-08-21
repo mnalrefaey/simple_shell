@@ -52,7 +52,7 @@ return (c);
 }
 
 /**
- * **strtowrds - a function that splits string
+ * **strtowrdss - a function that splits string
  *
  * @strg: string
  *
@@ -61,7 +61,7 @@ return (c);
  * Return: array of strings, failure NULL
  */
 
-char **strtowrds(char *strg, char h)
+char **strtowrdss(char *strg, char h)
 {
 int x, y, u, j, nmwrds = 0;
 char **c;
