@@ -29,7 +29,7 @@ int x = 0;
 inf->filen = v[0];
 if (inf->arrg)
 {
-inf->arrgv = strgtow(inf->arrg, " \t");
+inf->arrgv = strtwords(inf->arrg, " \t");
 if (!inf->arrgv)
 {
 inf->arrgv = malloc(sizeof(char *) * 2);
