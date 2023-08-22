@@ -98,14 +98,14 @@ return (1);
 }
 
 /**
- * vaars_replace - a function that replaces vaars
+ * replace_fars - a function that replaces vaars
  *
  * @inf: parameter
  *
  * Return: replaced 1, otherwise 0
  */
 
-int vaars_replace(inf_t *inf)
+int replace_fars(inf_t *inf)
 {
 int x = 0;
 list_t *nodd;

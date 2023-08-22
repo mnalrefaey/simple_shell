@@ -50,7 +50,7 @@ return (buff);
 }
 
 /**
- * paath_find - a function that finds cm in paath
+ * find_paath - a function that finds cm in paath
  *
  * @inf: struct
  *
@@ -61,7 +61,7 @@ return (buff);
  * Return: paath or NULL
  */
 
-char *paath_find(inf_t *inf, char *paathstrg, char *cm)
+char *find_paath(inf_t *inf, char *paathstrg, char *cm)
 {
 int x = 0, current_poss = 0;
 char *paath;
