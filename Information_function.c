@@ -1,12 +1,12 @@
 #include "myyshell.h"
 
 /**
- * clean_inf - a function that initializes struct
+ * clear_inf - a function that initializes struct
  *
  * @inf: address
  */
 
-void clean_inf(inf_t *inf)
+void clear_inf(inf_t *inf)
 {
 inf->arrg = NULL;
 inf->arrgv = NULL;

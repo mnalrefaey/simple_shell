@@ -1,101 +1,120 @@
 #include "myyshell.h"
 
 /**
- *_xexit - a function that exits the shell
- *
- *@inf: a structure potential arguments
- *
- *Return: exit (0) if in.arrgv[0] != "exit"
- */
-
-int _xexit(inf_t *inf)
+ * _myhisstory - function show the history list and start in 0
+ * @inf: arguments structure
+ *  Return: on success always 0
+*/
+ 
+int _myhisstory(inf_t *inf)
 {
-
-int check;
-
-if (inf->arrgv[1])
-{
-check = _erratooi(inf->arrgv[1]);
-if (check == -1)
-{
-inf->statuus = 2;
-print_errr(inf, "Illegal number: ");
-_eputts(inf->arrgv[1]);
-_eputtchar('\n');
-return (1);
-}
-inf->err_numm = _erratooi(inf->arrgv[1]);
-return (-2);
-}
-inf->err_numm = -1;
-return (-2);
-}
-
-/**
- *_cd - a function that changes the directory
- *
- *@inf: structure containing  arguments
- *
- *Return: Always 0
- */
-
-int _cd(inf_t *inf)
-{
-char *s, *dir, buffr[1024];
-int chdir_rit;
-
-s = getcwd(buffr, 1024);
-if (s == NULL)
-_puuts("TODO: >>getcwd failure here<<\n");
-if (!inf->arrgv[1])
-{
-dir = _getinv(inf, "HOME=");
-if (dir == NULL)
-chdir_rit = chdir((dir = _getinv(inf, "PWD=")) ? dir : "/");
-else
-chdir_rit = chdir(dir);
-}
-else if (_strgcmp(inf->arrgv[1], "-") == 0)
-{
-if (!_getinv(inf, "OLDPWD="))
-{
-_puuts(s);
-_putchaar('\n');
-return (1);
-}
-_puuts(_getinv(inf, "OLDPWD=")), _putchaar('\n');
-chdir_rit = chdir((dir = _getinv(inf, "OLDPWD=")) ? dir : "/");
-}
-else
-chdir_rit = chdir(inf->arrgv[1]);
-if (chdir_rit == -1)
-{
-print_errr(inf, "can't do ");
-_eputts(inf->arrgv[1]), _eputtchar('\n');
-}
-else
-{
-_setinv(inf, "OLDPWD", _getinv(inf, "PWD="));
-_setinv(inf, "PWD", getcwd(buffr, 1024));
-}
+print_lest(inf->hisstory);
 return (0);
 }
 
 /**
- * _help - a function that changes the  directory
- *
- * @inf: structure containing arguments
- *
- * Return: Always 0
- */
-
-int _help(inf_t *inf)
+ * unset_aliaas - the string that we set alaais
+ * @inf:  struct paraments
+ * @strg: the string
+ * Return: on success 0, else 1
+*/
+ 
+int unset_aliaas(inf_t *inf, char *strg)
 {
-char **arrg_arry;
+char *b, g;
+int rt;
 
-arrg_arry = inf->arrgv;
-_puuts("Function not ready \n");
-if (0)
-_puuts(*arrg_arry);
+b = _strgchr(strg, '=');
+if (!b)
+return (1);
+
+g = *b;
+*b = 0;
+rt = delete_nodd_at_index(&(inf->aliaas),
+    get_nodd_index(inf->aliaas, nodd_begin_with(inf->aliaas, strg, -1)));
+*b = g;
+return (rt);
+}
+
+/**
+ * set_aliaas - the string that we set alaais
+ * @inf: struct
+ * @strg: the string
+ * Return: on success 0, else 1
+*/
+
+int set_aliaas(inf_t *inf, char *strg)
+{
+char *b;
+
+b = _strgchr(strg, '=');
+if (!b)
+return (1);
+
+if (!*++b)
+return (unset_aliaas(inf, strg));
+
+unset_aliaas(inf, strg);
+return (add_nodd_end(&(inf->aliaas), strg, 0) == NULL);
+}
+
+/**
+ * print_aliaas - prints string aliaas
+ * @nodd: the nodd aliaas
+ * Return: on success 0, else 1
+*/
+
+int print_aliaas(list_t *nodd)
+{
+char *b = NULL, *i = NULL;
+
+if (nodd)
+{
+b = _strgchr(nodd->strgr, '=');
+for (i = nodd->strgr; i <= b; i++)
+    
+_putchaar(*i);
+_putchaar('\'');
+_puuts(b + 1);
+_puuts("'\n");
 return (0);
+}
+
+return (1);
+}
+
+/**
+ * _myaliaas - mimics the aliaas builltiin
+ * @in: structure containing potential arguments
+ * Return: on success always 0
+*/
+
+int _myaliaas(inf_t *in)
+{
+int a = 0;
+char *b = NULL;
+list_t *nodd = NULL;
+
+if (in->arrgc == 1)
+{
+nodd = in->aliaas;
+
+while (nodd)
+{
+print_aliaas(nodd);
+nodd = nodd->nex;
+}
+
+return (0);
+}
+for (a = 1; in->arrgv[a]; a++)
+{
+b = _strgchr(in->arrgv[a], '=');
+if (b)
+set_aliaas(in, in->arrgv[a]);
+
+else
+print_aliaas(nodd_begin_with(in->aliaas, in->arrgv[a], '='));
+}
+return(0);
 }
