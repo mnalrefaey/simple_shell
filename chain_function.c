@@ -71,11 +71,11 @@ r = lnth;
 *poss = r;
 }
 /**
- * aliaas_replacer - a function that replaces aliaases
+ * replace_aliaas - a function that replaces aliaases
  * @inf: parameter
  * Return: replaced 1, otherwise 0
  */
-int aliaas_replacer (inf_t *inf)
+int replace_aliaas (inf_t *inf)
 {
 int x;
 list_t *nodd;

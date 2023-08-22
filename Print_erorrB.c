@@ -1,13 +1,13 @@
 #include "myyshell.h"
 
 /**
- * _epuuts - string input to print
+ * _eputts - string input to print
  *
  * @strg: print the string
  * Return: Non.
 */
 
-void _epuuts(char *strg)
+void _eputts(char *strg)
 {
 int a = 0;
 

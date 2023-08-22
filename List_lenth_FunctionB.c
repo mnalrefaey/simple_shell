@@ -20,12 +20,12 @@ return (a);
 }
 
 /**
- * list_t_string - returns an array of strings of the list->strg
+ * list_t_strings - returns an array of strings of the list->strg
  * @hd: pointer to first nodd
  * Return: array of strings
 */
 
-char **list_t_string(list_t *hd)
+char **list_t_strings(list_t *hd)
 {
 list_t *nodd = hd;
 size_t a = list_lenth(hd), k;

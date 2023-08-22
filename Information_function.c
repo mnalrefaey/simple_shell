@@ -66,11 +66,11 @@ if (every)
 if (!inf->cm_buff)
 free(inf->arrg);
 if (inf->inv)
-vree_list(&(inf->inv));
+vrree_lst(&(inf->inv));
 if (inf->hisstory)
-vree_list(&(inf->hisstory));
+vrree_lst(&(inf->hisstory));
 if (inf->aliaas)
-vree_list(&(inf->aliaas));
+vrree_lst(&(inf->aliaas));
 vree(inf->inviroon);
 inf->inviroon = NULL;
 bevree((void **)inf->cm_buff);

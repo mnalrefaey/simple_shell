@@ -217,7 +217,7 @@ list_t *add_nodd(list_t **, const char *, int);
 list_t *add_nodd_end(list_t **, const char *, int);
 size_t print_lest_strg(const list_t *);
 int delete_nodd_at_index(list_t **, unsigned int);
-void vree_list(list_t **);
+void vrree_lst(list_t **);
 
 /*List_lenth_FunctionB.c*/
 size_t list_lenth(const list_t *);

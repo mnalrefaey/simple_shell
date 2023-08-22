@@ -1,14 +1,14 @@
 #include "myyshell.h"
 
 /**
- *_xexit - a function that exits the shell
+ *_xxexit - a function that exits the shell
  *
  *@inf: a structure potential arguments
  *
  *Return: exit (0) if in.arrgv[0] != "exit"
  */
 
-int _xexit(inf_t *inf)
+int _xxexit(inf_t *inf)
 {
 
 int check;
@@ -32,14 +32,14 @@ return (-2);
 }
 
 /**
- *_cd - a function that changes the directory
+ *_xcd - a function that changes the directory
  *
  *@inf: structure containing  arguments
  *
  *Return: Always 0
  */
 
-int _cd(inf_t *inf)
+int _xcd(inf_t *inf)
 {
 char *s, *dir, buffr[1024];
 int chdir_rit;
@@ -82,14 +82,14 @@ return (0);
 }
 
 /**
- * _help - a function that changes the  directory
+ * _xhelp - a function that changes the  directory
  *
  * @inf: structure containing arguments
  *
  * Return: Always 0
  */
 
-int _help(inf_t *inf)
+int _xhelp(inf_t *inf)
 {
 char **arrg_arry;
 

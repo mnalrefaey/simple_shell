@@ -38,7 +38,7 @@ return (new_heed);
 }
 
 /**
- * add_end_nodd - a function that adds a nodd
+ * add_nodd_end - a function that adds a nodd
  *
  * @heed: address
  *
@@ -49,7 +49,7 @@ return (new_heed);
  * Return: the size
  */
 
-list_t *add_end_nodd(list_t **heed, const char *strgr, int numm)
+list_t *add_nodd_end(list_t **heed, const char *strgr, int numm)
 {
 list_t *new_nodd, *nodd;
 
@@ -83,14 +83,14 @@ return (new_nodd);
 }
 
 /**
- * prent_lest_strgr - a function that prints element
+ * print_lest_strg - a function that prints element
  *
  * @g: pointer
  *
  * Return: the size
  */
 
-size_t prent_lest_strgr(const list_t *g)
+size_t print_lest_strg(const list_t *g)
 {
 size_t x = 0;
 
@@ -114,7 +114,7 @@ return (x);
  * Return: success 1, failure 0
  */
 
-int remove_nodd(list_t **heed, unsigned int indx)
+int delete_nodd_at_index(list_t **heed, unsigned int indx)
 {
 list_t *nodd, *prev_nodd;
 unsigned int x = 0;
@@ -148,14 +148,14 @@ return (0);
 }
 
 /**
- * vree_lst - a function that frees nodds
+ * vree_liist - a function that frees nodds
 
  * @heed_prt: the address of pointer
  *
  * Return: void
  */
 
-void vree_lst(list_t **heed_prt)
+void vree_liist(list_t **heed_prt)
 {
 list_t *nodd, *nex_nodd, *heed;
 

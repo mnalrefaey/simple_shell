@@ -47,14 +47,14 @@ return (m);
 }
 
 /**
- * get_inpt - a function that gets minus of line
+ * get_input - a function that gets minus of line
  *
  * @inf: struct
  *
  * Return: bytes
  */
 
-ssize_t get_inpt(inf_t *inf)
+ssize_t get_input(inf_t *inf)
 {
 static char *buff;
 static size_t x, k, ln;
