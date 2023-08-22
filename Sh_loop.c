@@ -1,14 +1,14 @@
 #include "myyshell.h"
 
 /**
- * shl - loop of shell
+ * haash - loop of shell
  * @inf: parameter
  * @v: vector
  *
  * Return: success 0, error 1, error
  */
 
-int shl(inf_t *inf, char **v)
+int haash(inf_t *inf, char **v)
 {
 ssize_t t = 0;
 int builltiin_ret = 0;

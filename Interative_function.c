@@ -1,13 +1,13 @@
 #include "myyshell.h"
 
 /**
- * Interative - a function that returns true if shell is Interative
+ * interative - a function that returns true if shell is Interative
  *
  * @inf: struct address
  * Return: If interative mode returns 1, otherwise 0
  */
 
-int Interative(inf_t *inf)
+int interative(inf_t *inf)
 {
 return (isatty(STDIN_FILENO) && inf->rdf <= 2);
 }

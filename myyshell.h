@@ -155,7 +155,7 @@ char **strtowrdss(char *, char);
 
 /*function_memoryB.c*/
 char *_memst(char *, char, unsigned int);
-void vree(char **);
+void vrree(char **);
 void *_reallocate(void *, unsigned int, unsigned int);
 
 /*function_memoryA.c*/

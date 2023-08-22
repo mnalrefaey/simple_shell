@@ -19,11 +19,11 @@ return (c);
 }
 
 /**
- * vree_lst - the string be free
+ * vrree - the string be free
  * @fr: the string that will be free
 */
 
-void vree_lst(char **fr)
+void vrree(char **fr)
 {
 char **i = fr;
 

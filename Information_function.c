@@ -58,7 +58,7 @@ replace_fars(inf);
 
 void vree_inf(inf_t *inf, int every)
 {
-vree(inf->arrgv);
+vrree(inf->arrgv);
 inf->arrgv = NULL;
 inf->paath = NULL;
 if (every)
@@ -71,7 +71,7 @@ if (inf->hisstory)
 vrree_lst(&(inf->hisstory));
 if (inf->aliaas)
 vrree_lst(&(inf->aliaas));
-vree(inf->inviroon);
+vrree(inf->inviroon);
 inf->inviroon = NULL;
 bevree((void **)inf->cm_buff);
 if (inf->rdf > 2)

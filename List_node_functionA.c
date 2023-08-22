@@ -148,14 +148,14 @@ return (0);
 }
 
 /**
- * vree_liist - a function that frees nodds
+ * vrree_lst - a function that frees nodds
 
  * @heed_prt: the address of pointer
  *
  * Return: void
  */
 
-void vree_liist(list_t **heed_prt)
+void vrree_lst(list_t **heed_prt)
 {
 list_t *nodd, *nex_nodd, *heed;
 
