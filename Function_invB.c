@@ -10,7 +10,7 @@
 
 int _myinv(inf_t *inf)
 {
-print_lest_strg(inf->inv);
+print_lest_strg(inf->env);
 return (0);
 }
 
@@ -19,13 +19,13 @@ return (0);
  *
  * @inf: structure arguments
  *
- * @nam: inv var
+ * @nam: env
  * Return: value
  */
 
 char *_getinv(inf_t *inf, const char *nam)
 {
-list_t *nodd = inf->inv;
+list_t *nodd = inf->env;
 char *pr;
 
 while (nodd)
@@ -95,6 +95,6 @@ size_t j;
 
 for (j = 0; environ[j]; j++)
 add_nodd_end(&nodd, environ[j], 0);
-inf->inv = nodd;
+inf->env = nodd;
 return (0);
 }

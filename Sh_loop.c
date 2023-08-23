@@ -59,7 +59,7 @@ int find_builltiin(inf_t *inf)
 int x, builltiin_inn_ret = -1;
 builltiin_table builltiintbl[] = {
 {"exit", _xexit},
-{"inv", _myinv},
+{"env", _myinv},
 {"help", _help},
 {"hisstory", _myhisstory},
 {"setinv", _mysetinv},

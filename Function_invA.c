@@ -10,7 +10,7 @@ char **get_inviroon(inf_t *inf)
 {
 if (!inf->environ || inf->inv_changed)
 {
-inf->environ = list_t_strings(inf->inv);
+inf->environ = list_t_strings(inf->env);
 inf->inv_changed = 0;
 
 }
@@ -26,7 +26,7 @@ return (inf->environ);
 
 int _unsetinv(inf_t *inf, char *vr)
 {
-list_t *nodd = inf->inv;
+list_t *nodd = inf->env;
 size_t a = 0;
 char *b;
 
@@ -39,9 +39,9 @@ b = begin_with(nodd->strgr, vr);
 
 if (b && *b == '=')
 {
-inf->inv_changed = delete_nodd_at_index(&(inf->inv), a);
+inf->inv_changed = delete_nodd_at_index(&(inf->env), a);
 a = 0;
-nodd = inf->inv;
+nodd = inf->env;
 continue;
 
 }
@@ -76,7 +76,7 @@ return (1);
 _strgcpy(buff, vr);
 _strgcat(buff, "=");
 _strgcat(buff, vlu);
-nodd = inf->inv;
+nodd = inf->env;
 
 while (nodd)
 {
@@ -92,7 +92,7 @@ return (0);
 nodd = nodd->nex;
 
 }
-add_nodd_end(&(inf->inv), buff, 0);
+add_nodd_end(&(inf->env), buff, 0);
 free(buff);
 inf->inv_changed = 1;
 

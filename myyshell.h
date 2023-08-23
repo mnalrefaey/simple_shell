@@ -69,7 +69,7 @@ struct lststrg *nex;
  * @cm_buff: an address of pointer
  * @err_numm: exit for code error
  * @filen: filename
- * @inv: copy of environ
+ * @env: copy of environ
  * @linec_fllag: if on count this line of input
  */
 
@@ -83,7 +83,7 @@ unsigned int line_countt;
 int err_numm;
 int linec_fllag;
 char *filen;
-list_t *inv;
+list_t *env;
 list_t *hisstory;
 list_t *aliaas;
 char **environ;

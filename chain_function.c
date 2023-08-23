@@ -127,7 +127,7 @@ rep_string(&(inf->arrgv[x]),
 _strgdup(conv_numb(getpid(), 10, 0)));
 continue;
 }
-nodd = nodd_begin_with(inf->inv, &inf->arrgv[x][1], '=');
+nodd = nodd_begin_with(inf->env, &inf->arrgv[x][1], '=');
 if (nodd)
 {
 rep_string(&(inf->arrgv[x]),

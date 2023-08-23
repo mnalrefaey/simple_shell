@@ -65,8 +65,8 @@ if (every)
 {
 if (!inf->cm_buff)
 free(inf->arrg);
-if (inf->inv)
-vrree_lst(&(inf->inv));
+if (inf->env)
+vrree_lst(&(inf->env));
 if (inf->hisstory)
 vrree_lst(&(inf->hisstory));
 if (inf->aliaas)
