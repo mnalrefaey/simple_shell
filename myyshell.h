@@ -96,7 +96,8 @@ int historycount;
 } inf_t;
 
 #define INFRMATION_INIT \
-{NULL, 0}
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+0, 0, 0}
 
 /**
  * struct builltiin - a builtin string
