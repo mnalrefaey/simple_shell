@@ -5,7 +5,7 @@
  * @inf: arguments structure
  *  Return: on success always 0
 */
- 
+
 int _myhisstory(inf_t *inf)
 {
 print_lest(inf->hisstory);
@@ -18,7 +18,7 @@ return (0);
  * @strg: the string
  * Return: on success 0, else 1
 */
- 
+
 int unset_aliaas(inf_t *inf, char *strg)
 {
 char *b, g;
@@ -31,7 +31,7 @@ return (1);
 g = *b;
 *b = 0;
 rt = delete_nodd_at_index(&(inf->aliaas),
-    get_nodd_index(inf->aliaas, nodd_begin_with(inf->aliaas, strg, -1)));
+get_nodd_index(inf->aliaas, nodd_begin_with(inf->aliaas, strg, -1)));
 *b = g;
 return (rt);
 }
@@ -72,7 +72,7 @@ if (nodd)
 {
 b = _strgchr(nodd->strgr, '=');
 for (i = nodd->strgr; i <= b; i++)
-    
+
 _putchaar(*i);
 _putchaar('\'');
 _puuts(b + 1);
@@ -116,5 +116,5 @@ set_aliaas(in, in->arrgv[a]);
 else
 print_aliaas(nodd_begin_with(in->aliaas, in->arrgv[a], '='));
 }
-return(0);
+return (0);
 }

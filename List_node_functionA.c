@@ -105,7 +105,7 @@ return (x);
 }
 
 /**
- * remove_nodd - a function that removes nodd
+ * delete_nodd_at_index - a function that removes nodd
  *
  * @heed: address
  *
@@ -149,7 +149,7 @@ return (0);
 
 /**
  * vrree_lst - a function that frees nodds
-
+ *
  * @heed_prt: the address of pointer
  *
  * Return: void

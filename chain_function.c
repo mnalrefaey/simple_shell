@@ -75,7 +75,7 @@ r = lnth;
  * @inf: parameter
  * Return: replaced 1, otherwise 0
  */
-int replace_aliaas (inf_t *inf)
+int replace_aliaas(inf_t *inf)
 {
 int x;
 list_t *nodd;
