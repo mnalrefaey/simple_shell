@@ -95,8 +95,6 @@ int rdf;
 int historycount;
 } inf_t;
 
-#define INFRMATION_INIT \
-
 /**
  * struct builltiin - a builtin string
  * @tyype: flag of builtin command
