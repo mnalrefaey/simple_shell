@@ -62,8 +62,8 @@ builltiin_table builltiintbl[] = {
 {"env", _myinv},
 {"help", _help},
 {"hisstory", _myhisstory},
-{"setinv", _mysetinv},
-{"unsetinv", _myunsetinv},
+{"setenv", _mysetinv},
+{"unsetenv", _myunsetinv},
 {"cd", _cd},
 {"aliaas", _myaliaas},
 {NULL, NULL}
