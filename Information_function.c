@@ -71,8 +71,8 @@ if (inf->hisstory)
 vrree_lst(&(inf->hisstory));
 if (inf->aliaas)
 vrree_lst(&(inf->aliaas));
-vrree(inf->inviroon);
-inf->inviroon = NULL;
+vrree(inf->environ);
+inf->environ = NULL;
 bevree((void **)inf->cm_buff);
 if (inf->rdf > 2)
 close(inf->rdf);

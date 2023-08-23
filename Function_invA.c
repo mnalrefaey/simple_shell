@@ -8,17 +8,17 @@
 
 char **get_inviroon(inf_t *inf)
 {
-if (!inf->inviroon || inf->inv_changed)
+if (!inf->environ || inf->inv_changed)
 {
-inf->inviroon = list_t_strings(inf->inv);
+inf->environ = list_t_strings(inf->inv);
 inf->inv_changed = 0;
 
 }
-return (inf->inviroon);
+return (inf->environ);
 }
 
 /**
- * _unsetinv - variable removed from an inviroon
+ * _unsetinv - variable removed from an environ
  * @inf: argument structure
  * @vr: property string
  * Return: on success deleting 1, else 0

@@ -34,7 +34,7 @@
 #define HST_FILE ".simple_shell_hist"
 #define HST_MAX 4096
 
-extern char **inviroon;
+extern char **environ;
 
 /**
  * struct lststrg - singly list
@@ -61,7 +61,7 @@ struct lststrg *nex;
  * @historycount: the hisstory line number count
  * @rdf: to read the input of line
  * @statuus: the return statuus of the last exec'd command
- * @inviroon: a modified copy of inviroon
+ * @environ: a modified copy of environ
  * @arrgv:array of strings
  * @arrgc: count of argument
  * @cm_buff_type: CM_type
@@ -69,7 +69,7 @@ struct lststrg *nex;
  * @cm_buff: an address of pointer
  * @err_numm: exit for code error
  * @filen: filename
- * @inv: copy of inviroon
+ * @inv: copy of environ
  * @linec_fllag: if on count this line of input
  */
 
@@ -86,7 +86,7 @@ char *filen;
 list_t *inv;
 list_t *hisstory;
 list_t *aliaas;
-char **inviroon;
+char **environ;
 int inv_changed;
 int statuus;
 char **cm_buff;

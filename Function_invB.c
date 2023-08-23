@@ -93,8 +93,8 @@ int populate_inv_lst(inf_t *inf)
 list_t *nodd = NULL;
 size_t j;
 
-for (j = 0; inviroon[j]; j++)
-add_nodd_end(&nodd, inviroon[j], 0);
+for (j = 0; environ[j]; j++)
+add_nodd_end(&nodd, environ[j], 0);
 inf->inv = nodd;
 return (0);
 }
