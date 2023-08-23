@@ -19,7 +19,7 @@ check = _erratooi(inf->arrgv[1]);
 if (check == -1)
 {
 inf->statuus = 2;
-print_errr(inf, "Illegal number: ");
+print_errr(inf, "Illegal: ");
 _eputts(inf->arrgv[1]);
 _eputtchar('\n');
 return (1);
@@ -41,30 +41,30 @@ return (-2);
 
 int _cd(inf_t *inf)
 {
-char *s, *dir, buffr[1024];
+char *c, *direc, buffr[1024];
 int chdir_rit;
 
-s = getcwd(buffr, 1024);
-if (s == NULL)
-_puuts("TODO: >>getcwd failure here<<\n");
+c = getcwd(buffr, 1024);
+if (c == NULL)
+_puuts("TODO: >>getcwd failure<<\n");
 if (!inf->arrgv[1])
 {
-dir = _getinv(inf, "HOME=");
-if (dir == NULL)
-chdir_rit = chdir((dir = _getinv(inf, "PWD=")) ? dir : "/");
+direc = _getinv(inf, "HOME=");
+if (direc == NULL)
+chdir_rit = chdir((direc = _getinv(inf, "PWD=")) ? direc : "/");
 else
-chdir_rit = chdir(dir);
+chdir_rit = chdir(direc);
 }
 else if (_strgcmp(inf->arrgv[1], "-") == 0)
 {
 if (!_getinv(inf, "OLDPWD="))
 {
-_puuts(s);
+_puuts(c);
 _putchaar('\n');
 return (1);
 }
 _puuts(_getinv(inf, "OLDPWD=")), _putchaar('\n');
-chdir_rit = chdir((dir = _getinv(inf, "OLDPWD=")) ? dir : "/");
+chdir_rit = chdir((direc = _getinv(inf, "OLDPWD=")) ? direc : "/");
 }
 else
 chdir_rit = chdir(inf->arrgv[1]);
